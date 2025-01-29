@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const templateParams = {
             name: userName,  // Sending the user's name
-            feedback: feedbackMessage
+            feedback: feedbackMessage  //Sending the user's feedback message
         };
 
         emailjs.send("service_qwemcr7", "template_r9qxsql", templateParams)
