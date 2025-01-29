@@ -1,15 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init("eb9hS_CcaZufSwiUH"); // Replace with your EmailJS public key
+    emailjs.init("eb9hS_CcaZufSwiUH"); // EmailJS public key
 
     document.getElementById("feedbackForm").addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent default form submission
 
-        const templateParams = {
+        var templateParams = {
             name: userName,  // Sending the user's name
             feedback: feedbackMessage  //Sending the user's feedback message
         };
 
-        emailjs.send("service_qwemcr7", "template_r9qxsql", templateParams)
+        const serviceID = "service_qwemcr7";  // EmailJS service id
+        const templateID = "template_r9qxsql";  // EmailJS template id
+
+        emailjs.send(serviceID, templateID, templateParams)
             .then(function (response) {
                 window.location.href = "thank_you.html"; // Redirect to thank-you page
             })
