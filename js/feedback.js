@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         emailjs.send("service_qwemcr7", "template_r9qxsql", templateParams)
             .then(function (response) {
-                alert("Thank you for your feedback!");
                 window.location.href = "thank_you.html"; // Redirect to thank-you page
             })
             .catch(function (error) {
