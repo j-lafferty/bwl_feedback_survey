@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script defer src="js/feedback.js"></script>
 </head>
-<body>
-    <div class="container">
-        <h1>Please let us know how we can improve</h1>
-        <form id="feedbackForm">
-            <input type="text" id="userName" placeholder="Your Name" required>
-            <textarea id="feedbackMessage" rows="5" placeholder="Enter your feedback here..." required></textarea>
-            <button type="submit">Submit</button>
-        </form>
+<body class="d-flex justify-content-center align-items-start min-vh-100">
+    <div class="container content-container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow p-4 text-center">
+                    <img src="images/BlueWave Ledger Logo Circle_300x300_wbg.png" alt="BlueWave Ledger Logo" class="logo feedback-logo">
+                    <h1 class="mt-4 mb-4">Let us know how we can improve</h1>
+                    <form id="feedbackForm">
+                        <div class="mb-3">
+                            <input type="text" id="userName" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea id="feedbackMessage" class="form-control" rows="5" placeholder="Enter your feedback here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

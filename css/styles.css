@@ -1,33 +1,31 @@
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f4f4f4;
-    text-align: center;
+    background-color: white;
 }
 
-.container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 400px;
+.logo {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto 40px auto; /* Increased bottom margin */
 }
 
-h1 {
-    font-size: 20px;
-    margin-bottom: 20px;
+.feedback-logo {
+    margin: 0 auto 20px auto;
+}
+
+.content-container {
+    margin-top: 12vh; /* Moves the content slightly lower from the top */
+    padding-bottom: 45px; /* Adds space at the bottom */
 }
 
 .stars {
     display: flex;
     justify-content: center;
-    font-size: 30px;
+    font-size: 40px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 .star {
@@ -39,22 +37,4 @@ h1 {
 .star:hover,
 .star:hover ~ .star {
     text-shadow: 0 0 0 gold;
-}
-
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    margin-top: 10px;
-    padding: 10px;
-    background: blue;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
 }
