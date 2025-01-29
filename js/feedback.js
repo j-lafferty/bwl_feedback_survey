@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const templateParams = {
-            feedback: feedbackMessage
+            message: feedbackMessage
         };
 
         emailjs.send("service_qwemcr7", "template_r9qxsql", templateParams)
