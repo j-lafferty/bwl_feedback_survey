@@ -1,19 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init({publicKey: "eb9hS_CcaZufSwiUH",}); // Replace with your EmailJS public key
+    emailjs.init("eb9hS_CcaZufSwiUH"); // Replace with your EmailJS public key
 
     document.getElementById("feedbackForm").addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent default form submission
 
-        const feedbackMessage = document.getElementById("feedbackMessage").value.trim();
-
-        if (feedbackMessage === "") {
-            alert("Please enter your feedback before submitting.");
-            return;
-        }
-
         const templateParams = {
-            name: userName,
-            message: feedbackMessage
+            name: userName,  // Sending the user's name
+            feedback: feedbackMessage
         };
 
         emailjs.send("service_qwemcr7", "template_r9qxsql", templateParams)
