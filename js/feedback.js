@@ -4,7 +4,15 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("feedbackForm").addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent default form submission
 
-        var templateParams = {
+        const userName = document.getElementById("userName").value.trim();
+        const feedbackMessage = document.getElementById("feedbackMessage").value.trim();
+
+        if (userName === "" || feedbackMessage === "") {
+            alert("Please enter your name and feedback before submitting.");
+            return;
+        }
+
+        const templateParams = {
             name: userName,  // Sending the user's name
             feedback: feedbackMessage  //Sending the user's feedback message
         };
