@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const templateParams = {
+            name: userName,
             message: feedbackMessage
         };
 
