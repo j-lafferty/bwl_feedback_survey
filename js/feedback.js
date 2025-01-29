@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init("eb9hS_CcaZufSwiUH"); // Replace with your EmailJS public key
+    emailjs.init({publicKey: "eb9hS_CcaZufSwiUH",}); // Replace with your EmailJS public key
 
     document.getElementById("feedbackForm").addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent default form submission
